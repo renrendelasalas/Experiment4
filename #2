@@ -1,0 +1,40 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int arrayCount;
+	cout<<"Bubble/Seclection Sorting..."<<endl;
+	cout<<"Enter array size: ";
+	cin>>arrayCount;
+	cout<<"Enter the "<<arrayCount<<" elements"<<endl;
+	int elements[arrayCount];
+	
+	for(int a = 0; a < arrayCount; a++){
+		cin>>elements[a];
+	}
+	
+	cout<<"Your data: ";
+	for(int a = 0; a < arrayCount; a++){
+		cout<<elements[a]<<", ";
+	}
+	cout<<endl;
+	
+	int numHolder;
+	for(int x = 0; x < arrayCount; x++){
+		for(int y = x + 1; y < arrayCount; y++){
+			if(elements[x] > elements[y]){
+				numHolder = elements[x];
+				elements[x] = elements[y];
+				elements[y] = numHolder;
+			}
+		}
+	}
+	cout<<"After using bubble sort method"<<endl;
+	cout<<"Sorted data: ";
+	for(int a = 0; a < arrayCount; a++){
+		cout<<elements[a]<<", ";
+	}
+	getch();
+	return 0;
+}
