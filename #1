@@ -1,0 +1,84 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> 
+#include<iomanip> 
+
+  
+using namespace std; 
+  
+void displaymenu(){ 
+cout<<"Type the corresponding number for the operation "<<"\n"; 
+cout<<"List of the operations that can be used: " <<"\n";
+cout<<"     1.Add"<<" "; 
+cout<<"     2.Subtract"<<" "; 
+cout<<"     3.Multiply"<<" "; 
+cout<<"     4.Divide"<<" "; 
+cout<<"     5.Modulus"<<"\n"; 
+     } 
+int Add(int x,int y)
+{ 
+    return(x+y); 
+} 
+  
+int Substract(int x, int y)
+{ 
+    return(x-y); 
+} 
+  
+int Multiply(int x, int y)
+{ 
+    return(x*y); 
+} 
+float Divide(int x,int y)
+{ 
+      return(x/y); 
+} 
+int Modulus(int x, int y)
+{ 
+    return(x%y); 
+} 
+  
+int main(int argc, char *argv[]) 
+{ 
+displaymenu(); 
+int choice; 
+int x; 
+int y; 
+char confirm; 
+do
+{ 
+cout<<"Enter your choice(1-5):"; 
+cin>>choice; 
+cout<<"Enter your two integer numbers:"; 
+cin>>x>>y; 
+cout<<" "; 
+switch(choice)
+{ 
+ case 1:cout<<"Result:"<<Add(x,y);
+ break; 
+ 
+ case 2:cout<<"Result:"<<Substract(x,y);
+ break; 
+ 
+ case 3:cout<<"Result:"<<Multiply(x,y);
+ break; 
+ 
+ case 4:cout<<"Result:"<<Divide(x,y);
+ break; 
+ 
+ case 5:cout<<"Result:"<<Modulus(x,y);
+ break; 
+ 
+ default:cout<<"Invalid"; 
+} 
+                   
+cout<<"\nPress  z or Z to continue:"; 
+       cin>>confirm; 
+       
+}
+while(confirm=='z'||confirm=='Z'); 
+  system("PAUSE"); 
+  
+  getch();
+   return EXIT_SUCCESS; 
+}
